@@ -11,6 +11,9 @@ namespace LPSloepke
     {
         public static Huurcontract contract = new Huurcontract();
 
+        /// <summary>
+        /// Vraagt het pad om bestand op te slaan van het contract dat zojuist is ingevuld
+        /// </summary>
         public static void ExportToText()
         {
             SaveFileDialog sfd = new SaveFileDialog();
@@ -20,6 +23,9 @@ namespace LPSloepke
             }
         }
 
+        /// <summary>
+        /// Vraagt het pad om bestand op te slaan van het contract dat rechts is geselecteerd
+        /// </summary>
         public static void ExportToText(Huurcontract hc)
         {
             hc.Artikelen =  GetHuurContractDetails(hc);
@@ -35,6 +41,9 @@ namespace LPSloepke
             Database.InsertContract(contract);
         }
 
+        /// <summary>
+        /// Maakt het bestand aan met de contractgegevens
+        /// </summary>
         private static void WriteFile(string path, Huurcontract hc)
         {
             using (StreamWriter sw = new StreamWriter(path))

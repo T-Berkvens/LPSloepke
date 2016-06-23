@@ -10,7 +10,9 @@ namespace LPSloepke
     {
         private static string _connectionstring = @"Data Source=(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=fhictora01.fhict.local)(PORT=1521)))
                                                    (CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=fhictora)));User ID=dbi336483;PASSWORD=ytcazk;";
-
+        /// <summary>
+        /// Slaat een contract op in de database
+        /// </summary>
         public static void InsertContract(Huurcontract contract)
         {
             string query = @"InsertContract";
@@ -98,6 +100,10 @@ namespace LPSloepke
             }
         }
 
+        /// <summary>
+        /// Haalt alle beschikbare boten op uit de database
+        /// </summary>
+        /// <returns>Lijst met beschikbare boten</returns>
         public static List<Boot> LaadBoten()
         {
             List<Boot> boten = new List<Boot>();
@@ -139,6 +145,10 @@ namespace LPSloepke
             return boten;
         }
 
+        /// <summary>
+        /// Haalt alle beschikbare accessoires op uit de database
+        /// </summary>
+        /// <returns>Lijst met beschikbare accessoires</returns>
         public static List<Accessoire> LaadAccessoires()
         {
             List<Accessoire> accessoires = new List<Accessoire>();
@@ -177,6 +187,10 @@ namespace LPSloepke
             return accessoires;
         }
 
+        /// <summary>
+        /// Haalt alle huurcontracten op uit de database
+        /// </summary>
+        /// <returns>Lijst met alle huurcontracten</returns>
         public static List<Huurcontract> LaadContracten()
         {
             List <Huurcontract> lst = new List<Huurcontract>();
@@ -216,6 +230,11 @@ namespace LPSloepke
             return lst;
         }
 
+        /// <summary>
+        /// Haalt alle gehuurde artikelen op van huurcontract
+        /// </summary>
+        /// <param name="id">ID van huurcontract waarvan je alle gehuurde artikelen wil weten</param>
+        /// <returns>Lijst met gehuurde artikelen</returns>
         public static List<Artikel> GetHuurContractDetails(int id)
         {
             List<Artikel> lst = new List<Artikel>();

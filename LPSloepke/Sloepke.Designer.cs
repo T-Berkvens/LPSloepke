@@ -89,6 +89,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnToonDetailsHuurcontract = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.lblContractPrijs = new System.Windows.Forms.Label();
             Artikelbeheer = new System.Windows.Forms.GroupBox();
             Artikelbeheer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdminTank)).BeginInit();
@@ -523,6 +524,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblContractPrijs);
             this.groupBox3.Controls.Add(this.btnContractBereken);
             this.groupBox3.Controls.Add(this.numContractBudget);
             this.groupBox3.Controls.Add(this.label6);
@@ -692,7 +694,7 @@
             // 
             this.tbContractMailAdres.Location = new System.Drawing.Point(102, 511);
             this.tbContractMailAdres.Name = "tbContractMailAdres";
-            this.tbContractMailAdres.Size = new System.Drawing.Size(100, 22);
+            this.tbContractMailAdres.Size = new System.Drawing.Size(200, 22);
             this.tbContractMailAdres.TabIndex = 10;
             // 
             // label2
@@ -708,7 +710,7 @@
             // 
             this.tbContractNaam.Location = new System.Drawing.Point(102, 483);
             this.tbContractNaam.Name = "tbContractNaam";
-            this.tbContractNaam.Size = new System.Drawing.Size(100, 22);
+            this.tbContractNaam.Size = new System.Drawing.Size(200, 22);
             this.tbContractNaam.TabIndex = 8;
             // 
             // label1
@@ -761,6 +763,15 @@
             this.btnLogin.Text = "Beheerder Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // lblContractPrijs
+            // 
+            this.lblContractPrijs.AutoSize = true;
+            this.lblContractPrijs.Location = new System.Drawing.Point(378, 613);
+            this.lblContractPrijs.Name = "lblContractPrijs";
+            this.lblContractPrijs.Size = new System.Drawing.Size(37, 16);
+            this.lblContractPrijs.TabIndex = 24;
+            this.lblContractPrijs.Text = "Prijs:";
             // 
             // Sloepke
             // 
@@ -858,6 +869,7 @@
         private System.Windows.Forms.ListBox lbAdminArtikelen;
         private System.Windows.Forms.Button btnAdminAdd;
         private System.Windows.Forms.Button btnAdminOpslaan;
+        private System.Windows.Forms.Label lblContractPrijs;
     }
 }
 

@@ -52,5 +52,31 @@ namespace LPSloepke
             bud = bud - kosten;
             return (bud > 7.5 ? (int)Math.Round(bud/1.5) : (int)Math.Round(bud));
         }
+
+        public double BerekenPrijs()
+        {
+            double total = 0;
+            TimeSpan span = Einde.Subtract(Begin);
+            int dagen = (int)Math.Round(span.TotalDays);
+            foreach (Artikel a in Artikelen.Where(x => x is Accessoire))
+            {
+                total += a.Prijs * (a as Accessoire).Aantal;
+            }
+            foreach (Artikel a in Artikelen.Where(x => x is Boot))
+            {
+                if (((Boot)a).BootType != BootType.Kano)
+                {
+                    total += (IJsselmeer ? 2 : 0) + (Noordzee ? 2 : 0);
+                    total += a.Prijs;
+                }
+                total += (FrieseMeren > 5 ? FrieseMeren * 1.5 : FrieseMeren);
+            }
+
+            if (dagen > 1)
+            {
+                total = total * dagen;
+            }
+            return total;
+        }
     }
 }
