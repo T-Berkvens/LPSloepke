@@ -84,10 +84,21 @@ namespace LPSloepke
         {
             if (dgvBotenSelected.SelectedRows[0] != null)
             {
-                Administratie.contract.Artikelen.RemoveAt(dgvBotenSelected.SelectedRows[0].Index);//fout
+                Boot boot = (Boot)dgvBotenSelected.SelectedRows[0].Tag;
+                foreach (Boot b in Administratie.contract.Artikelen.Where(x => x is Boot))
+                {
+                    if (boot.Naam == b.Naam)
+                    {
+                        Administratie.contract.Artikelen.Remove(b);
+                        break;
+                    }
+                }
+                int index = dgvBotenTotaal.Rows.Add();
+                dgvBotenTotaal.Rows[index].Tag = dgvBotenSelected.SelectedRows[0].Tag;
+                dgvBotenTotaal.Rows[index].Cells["colBotenTotaalNaam"].Value = dgvBotenSelected.SelectedRows[0].Cells["colBotenSelectedNaam"].Value;
+                dgvBotenTotaal.Rows[index].Cells["colBotenTotaalPrijs"].Value = dgvBotenSelected.SelectedRows[0].Cells["colBotenSelectedPrijs"].Value;
                 dgvBotenSelected.Rows.RemoveAt(dgvBotenSelected.SelectedRows[0].Index);
             }
-            LaadBoten();
         }
 
         private void btnAddArtikel_Click(object sender, EventArgs e)
@@ -104,6 +115,7 @@ namespace LPSloepke
                         rowBestaat = true;
                         Accessoire accessoire = (Accessoire)row.Tag;
                         accessoire.Aantal++;
+                        row.Tag = accessoire;
                     }
                 }
                 if (!rowBestaat)
@@ -126,12 +138,43 @@ namespace LPSloepke
 
         private void btnDelArtikel_Click(object sender, EventArgs e)
         {
-            if (dgvArtikelenSelected.SelectedRows[0] != null)
+            if (dgvArtikelenSelected.SelectedRows. != null)// betere oplossing zoeken
             {
-                Administratie.contract.Artikelen.RemoveAt(dgvArtikelenSelected.SelectedRows[0].Index);//fout
-                dgvArtikelenSelected.Rows.RemoveAt(dgvArtikelenSelected.SelectedRows[0].Index);
+                Accessoire accessoire = (Accessoire)dgvArtikelenSelected.SelectedRows[0].Tag;
+                foreach (Accessoire b in Administratie.contract.Artikelen.Where(x => x is Accessoire))
+                {
+                    if (accessoire.Naam == b.Naam)
+                    {
+                        if (accessoire.Aantal <= 1)
+                        {
+                            Administratie.contract.Artikelen.Remove(b);
+                            dgvArtikelenSelected.Rows.RemoveAt(dgvArtikelenSelected.SelectedRows[0].Index);
+                        }
+                        else
+                        {
+                            b.Aantal--;
+                        }
+                        break;
+                    }
+                }
+                bool gevonden = false;
+                foreach (DataGridViewRow row in dgvArtikelenTotaal.Rows)
+                {
+                    if (((Accessoire)row.Tag).Naam == accessoire.Naam)
+                    {
+                        ((Accessoire)row.Tag).Aantal++;
+                        gevonden = true;
+                    }
+                }
+                if (!gevonden)
+                {
+                    int index = dgvArtikelenTotaal.Rows.Add();
+                    Accessoire access = new Accessoire(accessoire.Naam, accessoire.Prijs, 1);
+                    dgvArtikelenTotaal.Rows[index].Tag = access;
+                    dgvArtikelenTotaal.Rows[index].Cells["colArtikelTotaalNaam"].Value = access.Naam;
+                    dgvArtikelenTotaal.Rows[index].Cells["colArtikelTotaalPrijs"].Value = access.Prijs;
+                }
             }
-            LaadAccessoires();
         }
 
         private void cbContractNoordzee_CheckedChanged(object sender, EventArgs e)
@@ -220,6 +263,8 @@ namespace LPSloepke
 
         private void GetHuurContractDetails()
         {
+            dgvArtikelenSelected.Rows.Clear();
+            dgvBotenSelected.Rows.Clear();
             int hcID = ((Huurcontract)dgvTotaalContracten.SelectedRows[0].Tag).ID;
             foreach (Artikel a in Administratie.GetHuurContractDetails(hcID))
             {
