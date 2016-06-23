@@ -169,11 +169,11 @@ namespace LPSloepke
             Administratie.contract.Begin = dtpBegin.Value;
             Administratie.contract.Einde = dtpEind.Value;
             Administratie.contract.FrieseMeren = Convert.ToInt32(numContractMeren.Value);
+            Administratie.ContractToDB();
             if (cbContractExport.Checked)
             {
                 Administratie.ExportToText();
             }
-            Administratie.ContractToDB();
             LaadBoten();
             LaadAccessoires();
             LaadContracten();
@@ -246,11 +246,13 @@ namespace LPSloepke
 
         private void btnExportContract_Click(object sender, EventArgs e)
         {
-            Administratie.ExportToText();
+            Administratie.ExportToText((Huurcontract)dgvTotaalContracten.SelectedRows[0].Tag);
         }
 
         private void btnContractBereken_Click(object sender, EventArgs e)
         {
+            Administratie.contract.Begin = dtpBegin.Value;
+            Administratie.contract.Einde = dtpEind.Value;
             numContractMeren.Value = Administratie.BerekenMeren(Convert.ToInt32(numContractBudget.Value));
         }
     }

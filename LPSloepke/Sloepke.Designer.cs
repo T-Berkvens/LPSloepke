@@ -295,6 +295,7 @@
             // 
             this.dgvTotaalContracten.AllowUserToAddRows = false;
             this.dgvTotaalContracten.AllowUserToDeleteRows = false;
+            this.dgvTotaalContracten.AllowUserToResizeRows = false;
             this.dgvTotaalContracten.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTotaalContracten.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colContractenHuurder,
@@ -334,6 +335,7 @@
             // 
             this.dgvBotenTotaal.AllowUserToAddRows = false;
             this.dgvBotenTotaal.AllowUserToDeleteRows = false;
+            this.dgvBotenTotaal.AllowUserToResizeRows = false;
             this.dgvBotenTotaal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBotenTotaal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colBotenTotaalNaam,
@@ -364,6 +366,7 @@
             // 
             this.dgvBotenSelected.AllowUserToAddRows = false;
             this.dgvBotenSelected.AllowUserToDeleteRows = false;
+            this.dgvBotenSelected.AllowUserToResizeRows = false;
             this.dgvBotenSelected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBotenSelected.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colBotenSelectedNaam,
@@ -460,6 +463,7 @@
             // 
             this.dgvArtikelenTotaal.AllowUserToAddRows = false;
             this.dgvArtikelenTotaal.AllowUserToDeleteRows = false;
+            this.dgvArtikelenTotaal.AllowUserToResizeRows = false;
             this.dgvArtikelenTotaal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArtikelenTotaal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colArtikelTotaalNaam,
@@ -490,6 +494,7 @@
             // 
             this.dgvArtikelenSelected.AllowUserToAddRows = false;
             this.dgvArtikelenSelected.AllowUserToDeleteRows = false;
+            this.dgvArtikelenSelected.AllowUserToResizeRows = false;
             this.dgvArtikelenSelected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArtikelenSelected.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colArtikelSelectedNaam,

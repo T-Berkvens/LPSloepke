@@ -27,30 +27,30 @@ namespace LPSloepke
             return "Huurder: " + Naam + Environment.NewLine + "Email: " + Email;
         }
 
-        public double BerekenPrijs()
+        public int BerekenMeren(int budget)
         {
-            double totalePrijs = 0;
+            TimeSpan span = Einde.Subtract(Begin);
+            int dagen = (int)Math.Round(span.TotalDays);
+            double bud = budget;
+            if (dagen > 1)
+            {
+                bud = budget / dagen;
+            }
+            double kosten = 0;
             foreach (Artikel a in Artikelen.Where(x => x is Accessoire))
             {
-                totalePrijs += a.Prijs;
+                kosten += a.Prijs * (a as Accessoire).Aantal;
             }
             foreach (Artikel a in Artikelen.Where(x => x is Boot))
             {
                 if (((Boot)a).BootType != BootType.Kano)
                 {
-                    totalePrijs += (IJsselmeer ? 2 : 0) + (Noordzee ? 2 : 0) + FrieseMeren + (FrieseMeren > 5 ? 0.5 * FrieseMeren : 0);
-                }
-                else
-                {
-                    totalePrijs += FrieseMeren;
+                    kosten += (IJsselmeer ? 2 : 0) + (Noordzee ? 2 : 0);
+                    kosten += a.Prijs;
                 }
             }
-            return totalePrijs;
-        }
-
-        public int BerekenMeren(int budget)
-        {
-            return 0;
+            bud = bud - kosten;
+            return (bud > 7.5 ? (int)Math.Round(bud/1.5) : (int)Math.Round(bud));
         }
     }
 }
