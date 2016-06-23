@@ -110,5 +110,36 @@ namespace LPSloepke
         {
             return contract.BerekenMeren(budget);
         }
+
+        public static string BerekenGevoelsTemperatuur()
+        {
+            string txt = "";
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader sr = new StreamReader(ofd.FileName))
+                {
+                    string line = "";
+                    while (!sr.EndOfStream)
+                    {
+                        line = sr.ReadLine();
+                        string[] parts = line.Split(';');
+                        if (Convert.ToDateTime(parts[0]).Ticks <= contract.Einde.Ticks && Convert.ToDateTime(parts[0]).Ticks >= contract.Begin.Ticks - 864000000000)
+                        {
+                            int tLucht = Convert.ToInt32(parts[1]);
+                            int luchtV = Convert.ToInt32(parts[2]);
+                            double gevoelsTemp = Math.Round((33 + (tLucht - 33) * (0.474 + 0.454 * Math.Sqrt((luchtV)) - 0.0454 * luchtV)), 2);
+                            txt += "Op: " + parts[0] + " wordt de gevoelstemperatuur: " + gevoelsTemp + " graden Celcius" + Environment.NewLine ;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                txt = "Kies een juist bestand om de temperatuur uit te rekenen.";
+            }
+
+            return txt;
+        }
     }
 }

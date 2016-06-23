@@ -37,8 +37,8 @@ namespace LPSloepkeUnitTests
         public void TestInsertContract()
         {
             Huurcontract contract = new Huurcontract();
-            contract.Email = "naam@mail.nl";
-            contract.Naam = "naam";
+            contract.Email = "geertruda@mail.nl";
+            contract.Naam = "geertruda";
             contract.IJsselmeer = true;
             contract.Noordzee = false;
             contract.FrieseMeren = 6;
@@ -49,6 +49,9 @@ namespace LPSloepkeUnitTests
             contract.Artikelen.Add(new Accessoire("Peddel", 1.25, 8));
             // als alle inserts goed gaan, returned deze true
             Assert.AreEqual(true, Database.InsertContract(contract));
+            Administratie.contract = contract;
+            // (2 + 15 + 1.25*4 + 1.25*8 + 6 * 1.5) * 5 = 205
+            Assert.AreEqual(205, Administratie.contract.BerekenPrijs());
         }
     }
 }

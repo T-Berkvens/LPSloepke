@@ -422,5 +422,12 @@ namespace LPSloepke
             Administratie.contract.Einde = dtpEind.Value;
             lblContractPrijs.Text = "Prijs: " + Administratie.contract.BerekenPrijs().ToString("C");
         }
+
+        private void btnGevoelsTemp_Click(object sender, EventArgs e)
+        {
+            Administratie.contract.Begin = dtpBegin.Value;
+            Administratie.contract.Einde = dtpEind.Value;
+            MessageBox.Show(Administratie.BerekenGevoelsTemperatuur());
+        }
     }
 }

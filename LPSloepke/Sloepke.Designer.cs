@@ -68,6 +68,7 @@
             this.colArtikelSelectedNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colArtikelSelectedPrijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblContractPrijs = new System.Windows.Forms.Label();
             this.btnContractBereken = new System.Windows.Forms.Button();
             this.numContractBudget = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
@@ -89,7 +90,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnToonDetailsHuurcontract = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.lblContractPrijs = new System.Windows.Forms.Label();
+            this.btnGevoelsTemp = new System.Windows.Forms.Button();
             Artikelbeheer = new System.Windows.Forms.GroupBox();
             Artikelbeheer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAdminTank)).BeginInit();
@@ -525,6 +526,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.btnGevoelsTemp);
             this.groupBox3.Controls.Add(this.lblContractPrijs);
             this.groupBox3.Controls.Add(this.btnContractBereken);
             this.groupBox3.Controls.Add(this.numContractBudget);
@@ -552,6 +554,15 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Huurcontract";
+            // 
+            // lblContractPrijs
+            // 
+            this.lblContractPrijs.AutoSize = true;
+            this.lblContractPrijs.Location = new System.Drawing.Point(378, 613);
+            this.lblContractPrijs.Name = "lblContractPrijs";
+            this.lblContractPrijs.Size = new System.Drawing.Size(37, 16);
+            this.lblContractPrijs.TabIndex = 24;
+            this.lblContractPrijs.Text = "Prijs:";
             // 
             // btnContractBereken
             // 
@@ -765,14 +776,16 @@
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // lblContractPrijs
+            // btnGevoelsTemp
             // 
-            this.lblContractPrijs.AutoSize = true;
-            this.lblContractPrijs.Location = new System.Drawing.Point(378, 613);
-            this.lblContractPrijs.Name = "lblContractPrijs";
-            this.lblContractPrijs.Size = new System.Drawing.Size(37, 16);
-            this.lblContractPrijs.TabIndex = 24;
-            this.lblContractPrijs.Text = "Prijs:";
+            this.btnGevoelsTemp.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGevoelsTemp.Location = new System.Drawing.Point(184, 639);
+            this.btnGevoelsTemp.Name = "btnGevoelsTemp";
+            this.btnGevoelsTemp.Size = new System.Drawing.Size(162, 23);
+            this.btnGevoelsTemp.TabIndex = 25;
+            this.btnGevoelsTemp.Text = "Bereken gevoelstemperatuur";
+            this.btnGevoelsTemp.UseVisualStyleBackColor = true;
+            this.btnGevoelsTemp.Click += new System.EventHandler(this.btnGevoelsTemp_Click);
             // 
             // Sloepke
             // 
@@ -871,6 +884,7 @@
         private System.Windows.Forms.Button btnAdminAdd;
         private System.Windows.Forms.Button btnAdminOpslaan;
         private System.Windows.Forms.Label lblContractPrijs;
+        private System.Windows.Forms.Button btnGevoelsTemp;
     }
 }
 
