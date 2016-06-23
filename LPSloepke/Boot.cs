@@ -7,7 +7,7 @@ namespace LPSloepke
 {
     public class Boot : Artikel
     {
-        BootType BootType;
+        public BootType BootType;
         public bool Motor;
         public double Tankinhoud;
 
@@ -16,6 +16,13 @@ namespace LPSloepke
             BootType = boottype;
             Motor = motor;
             Tankinhoud = tankinhoud;
+        }
+
+        public override string ToString()
+        {
+            return "Boot: " + Naam + Environment.NewLine +
+                "Type: " + BootType.ToString() + Environment.NewLine +
+                "Prijs: " + Prijs.ToString("C") + (Motor ? Environment.NewLine + "Actieradius: " + Tankinhoud*15 + "km": "");
         }
     }
 

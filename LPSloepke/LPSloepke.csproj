@@ -32,6 +32,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\..\..\..\..\C#\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -45,8 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accessoire.cs" />
+    <Compile Include="Administratie.cs" />
     <Compile Include="Artikel.cs" />
     <Compile Include="Boot.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Huurcontract.cs" />
     <Compile Include="Sloepke.cs">
       <SubType>Form</SubType>

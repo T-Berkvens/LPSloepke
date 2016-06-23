@@ -19,7 +19,7 @@ namespace LPSloepke
 
         public Huurcontract()
         {
-
+            Artikelen = new List<Artikel>();
         }
 
         public string ExportContract()
@@ -29,12 +29,28 @@ namespace LPSloepke
 
         public double BerekenPrijs()
         {
-            double artikelPrijs = 0;
-            foreach (Artikel a in Artikelen)
+            double totalePrijs = 0;
+            foreach (Artikel a in Artikelen.Where(x => x is Accessoire))
             {
-                artikelPrijs += a.Prijs;
+                totalePrijs += a.Prijs;
             }
-            return (IJsselmeer ? 2 : 0) + (Noordzee ? 2 : 0) + FrieseMeren + (FrieseMeren > 5? 0.5 * FrieseMeren : 0) + artikelPrijs;
+            foreach (Artikel a in Artikelen.Where(x => x is Boot))
+            {
+                if (((Boot)a).BootType != BootType.Kano)
+                {
+                    totalePrijs += (IJsselmeer ? 2 : 0) + (Noordzee ? 2 : 0) + FrieseMeren + (FrieseMeren > 5 ? 0.5 * FrieseMeren : 0);
+                }
+                else
+                {
+                    totalePrijs += FrieseMeren;
+                }
+            }
+            return totalePrijs;
+        }
+
+        public int BerekenMeren(int budget)
+        {
+            return 0;
         }
     }
 }

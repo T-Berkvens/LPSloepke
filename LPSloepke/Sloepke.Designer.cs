@@ -29,12 +29,32 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.GroupBox Artikelbeheer;
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdminOpslaan = new System.Windows.Forms.Button();
+            this.btnAdminDelete = new System.Windows.Forms.Button();
+            this.cbAdminMotorboot = new System.Windows.Forms.CheckBox();
+            this.rbAdminBoot = new System.Windows.Forms.RadioButton();
+            this.rbAdminArtikel = new System.Windows.Forms.RadioButton();
+            this.nudAdminTank = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nudAdminAantal = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.nudAdminPrijs = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbAdminNaam = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.lbAdminArtikelen = new System.Windows.Forms.ListBox();
+            this.btnAdminAdd = new System.Windows.Forms.Button();
+            this.btnExportContract = new System.Windows.Forms.Button();
             this.dgvTotaalContracten = new System.Windows.Forms.DataGridView();
+            this.colContractenHuurder = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colContractenBegin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colContractenEinde = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBotenTotaal = new System.Windows.Forms.DataGridView();
             this.colBotenTotaalNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colBotenTotaalPrijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvBotenSelected = new System.Windows.Forms.DataGridView();
+            this.colBotenSelectedNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBotenSelectedPrijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnDelBoot = new System.Windows.Forms.Button();
             this.btnAddBoot = new System.Windows.Forms.Button();
@@ -42,8 +62,21 @@
             this.btnDelArtikel = new System.Windows.Forms.Button();
             this.btnAddArtikel = new System.Windows.Forms.Button();
             this.dgvArtikelenTotaal = new System.Windows.Forms.DataGridView();
+            this.colArtikelTotaalNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colArtikelTotaalPrijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvArtikelenSelected = new System.Windows.Forms.DataGridView();
+            this.colArtikelSelectedNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colArtikelSelectedPrijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnContractBereken = new System.Windows.Forms.Button();
+            this.numContractBudget = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.numContractMeren = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cbContractIJsselmeer = new System.Windows.Forms.CheckBox();
+            this.cbContractNoordzee = new System.Windows.Forms.CheckBox();
+            this.cbContractExport = new System.Windows.Forms.CheckBox();
+            this.btnContractNieuw = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dtpEind = new System.Windows.Forms.DateTimePicker();
@@ -53,43 +86,14 @@
             this.tbContractNaam = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveContract = new System.Windows.Forms.Button();
-            this.colBotenSelectedNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBotenSelectedPrijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colArtikelTotaalNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colArtikelTotaalPrijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colArtikelSelectedNaam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colArtikelSelectedPrijs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnContractNieuw = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.colContractenHuurder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colContractenBegin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colContractenEinde = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cbContractExport = new System.Windows.Forms.CheckBox();
-            this.cbContractNoordzee = new System.Windows.Forms.CheckBox();
-            this.cbContractIJsselmeer = new System.Windows.Forms.CheckBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.numContractMeren = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.numContractBudget = new System.Windows.Forms.NumericUpDown();
-            this.btnContractBereken = new System.Windows.Forms.Button();
+            this.btnToonDetailsHuurcontract = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.btnAdminAdd = new System.Windows.Forms.Button();
-            this.lbAdminArtikelen = new System.Windows.Forms.ListBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tbAdminNaam = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.nudAdminPrijs = new System.Windows.Forms.NumericUpDown();
-            this.nudAdminAantal = new System.Windows.Forms.NumericUpDown();
-            this.label9 = new System.Windows.Forms.Label();
-            this.nudAdminTank = new System.Windows.Forms.NumericUpDown();
-            this.label10 = new System.Windows.Forms.Label();
-            this.rbAdminArtikel = new System.Windows.Forms.RadioButton();
-            this.rbAdminBoot = new System.Windows.Forms.RadioButton();
-            this.cbAdminMotorboot = new System.Windows.Forms.CheckBox();
-            this.btnAdminDelete = new System.Windows.Forms.Button();
-            this.btnAdminOpslaan = new System.Windows.Forms.Button();
             Artikelbeheer = new System.Windows.Forms.GroupBox();
+            Artikelbeheer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdminTank)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdminAantal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdminPrijs)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTotaalContracten)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBotenTotaal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBotenSelected)).BeginInit();
@@ -98,24 +102,194 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikelenTotaal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikelenSelected)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numContractMeren)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numContractBudget)).BeginInit();
-            Artikelbeheer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAdminPrijs)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAdminAantal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAdminTank)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numContractMeren)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // Artikelbeheer
             // 
-            this.button1.Location = new System.Drawing.Point(436, 450);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 33);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Exporteer contract";
-            this.button1.UseVisualStyleBackColor = true;
+            Artikelbeheer.Controls.Add(this.btnAdminOpslaan);
+            Artikelbeheer.Controls.Add(this.btnAdminDelete);
+            Artikelbeheer.Controls.Add(this.cbAdminMotorboot);
+            Artikelbeheer.Controls.Add(this.rbAdminBoot);
+            Artikelbeheer.Controls.Add(this.rbAdminArtikel);
+            Artikelbeheer.Controls.Add(this.nudAdminTank);
+            Artikelbeheer.Controls.Add(this.label10);
+            Artikelbeheer.Controls.Add(this.nudAdminAantal);
+            Artikelbeheer.Controls.Add(this.label9);
+            Artikelbeheer.Controls.Add(this.nudAdminPrijs);
+            Artikelbeheer.Controls.Add(this.label8);
+            Artikelbeheer.Controls.Add(this.tbAdminNaam);
+            Artikelbeheer.Controls.Add(this.label7);
+            Artikelbeheer.Controls.Add(this.lbAdminArtikelen);
+            Artikelbeheer.Controls.Add(this.btnAdminAdd);
+            Artikelbeheer.Location = new System.Drawing.Point(543, 511);
+            Artikelbeheer.Name = "Artikelbeheer";
+            Artikelbeheer.Size = new System.Drawing.Size(569, 215);
+            Artikelbeheer.TabIndex = 9;
+            Artikelbeheer.TabStop = false;
+            Artikelbeheer.Text = "Artikelbeheer";
+            // 
+            // btnAdminOpslaan
+            // 
+            this.btnAdminOpslaan.Location = new System.Drawing.Point(214, 78);
+            this.btnAdminOpslaan.Name = "btnAdminOpslaan";
+            this.btnAdminOpslaan.Size = new System.Drawing.Size(132, 33);
+            this.btnAdminOpslaan.TabIndex = 33;
+            this.btnAdminOpslaan.Text = "Opslaan";
+            this.btnAdminOpslaan.UseVisualStyleBackColor = true;
+            // 
+            // btnAdminDelete
+            // 
+            this.btnAdminDelete.Location = new System.Drawing.Point(214, 127);
+            this.btnAdminDelete.Name = "btnAdminDelete";
+            this.btnAdminDelete.Size = new System.Drawing.Size(132, 33);
+            this.btnAdminDelete.TabIndex = 32;
+            this.btnAdminDelete.Text = "Verwijder";
+            this.btnAdminDelete.UseVisualStyleBackColor = true;
+            // 
+            // cbAdminMotorboot
+            // 
+            this.cbAdminMotorboot.AutoSize = true;
+            this.cbAdminMotorboot.Location = new System.Drawing.Point(9, 140);
+            this.cbAdminMotorboot.Name = "cbAdminMotorboot";
+            this.cbAdminMotorboot.Size = new System.Drawing.Size(88, 20);
+            this.cbAdminMotorboot.TabIndex = 31;
+            this.cbAdminMotorboot.Text = "Motorboot";
+            this.cbAdminMotorboot.UseVisualStyleBackColor = true;
+            // 
+            // rbAdminBoot
+            // 
+            this.rbAdminBoot.AutoSize = true;
+            this.rbAdminBoot.Location = new System.Drawing.Point(128, 83);
+            this.rbAdminBoot.Name = "rbAdminBoot";
+            this.rbAdminBoot.Size = new System.Drawing.Size(54, 20);
+            this.rbAdminBoot.TabIndex = 30;
+            this.rbAdminBoot.TabStop = true;
+            this.rbAdminBoot.Text = "Boot";
+            this.rbAdminBoot.UseVisualStyleBackColor = true;
+            // 
+            // rbAdminArtikel
+            // 
+            this.rbAdminArtikel.AutoSize = true;
+            this.rbAdminArtikel.Location = new System.Drawing.Point(9, 83);
+            this.rbAdminArtikel.Name = "rbAdminArtikel";
+            this.rbAdminArtikel.Size = new System.Drawing.Size(63, 20);
+            this.rbAdminArtikel.TabIndex = 29;
+            this.rbAdminArtikel.TabStop = true;
+            this.rbAdminArtikel.Text = "Artikel";
+            this.rbAdminArtikel.UseVisualStyleBackColor = true;
+            // 
+            // nudAdminTank
+            // 
+            this.nudAdminTank.Location = new System.Drawing.Point(128, 173);
+            this.nudAdminTank.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudAdminTank.Name = "nudAdminTank";
+            this.nudAdminTank.Size = new System.Drawing.Size(53, 22);
+            this.nudAdminTank.TabIndex = 28;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 172);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(85, 16);
+            this.label10.TabIndex = 27;
+            this.label10.Text = "Tank inhoud:";
+            // 
+            // nudAdminAantal
+            // 
+            this.nudAdminAantal.Location = new System.Drawing.Point(128, 114);
+            this.nudAdminAantal.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudAdminAantal.Name = "nudAdminAantal";
+            this.nudAdminAantal.Size = new System.Drawing.Size(53, 22);
+            this.nudAdminAantal.TabIndex = 26;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 113);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 16);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Aantal:";
+            // 
+            // nudAdminPrijs
+            // 
+            this.nudAdminPrijs.Location = new System.Drawing.Point(128, 53);
+            this.nudAdminPrijs.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.nudAdminPrijs.Name = "nudAdminPrijs";
+            this.nudAdminPrijs.Size = new System.Drawing.Size(53, 22);
+            this.nudAdminPrijs.TabIndex = 24;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 52);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(37, 16);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "Prijs:";
+            // 
+            // tbAdminNaam
+            // 
+            this.tbAdminNaam.Location = new System.Drawing.Point(128, 23);
+            this.tbAdminNaam.Name = "tbAdminNaam";
+            this.tbAdminNaam.Size = new System.Drawing.Size(100, 22);
+            this.tbAdminNaam.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 26);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(48, 16);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Naam:";
+            // 
+            // lbAdminArtikelen
+            // 
+            this.lbAdminArtikelen.FormattingEnabled = true;
+            this.lbAdminArtikelen.ItemHeight = 16;
+            this.lbAdminArtikelen.Items.AddRange(new object[] {
+            "Artikelen"});
+            this.lbAdminArtikelen.Location = new System.Drawing.Point(352, 12);
+            this.lbAdminArtikelen.Name = "lbAdminArtikelen";
+            this.lbAdminArtikelen.Size = new System.Drawing.Size(210, 196);
+            this.lbAdminArtikelen.TabIndex = 1;
+            // 
+            // btnAdminAdd
+            // 
+            this.btnAdminAdd.Location = new System.Drawing.Point(214, 175);
+            this.btnAdminAdd.Name = "btnAdminAdd";
+            this.btnAdminAdd.Size = new System.Drawing.Size(132, 33);
+            this.btnAdminAdd.TabIndex = 0;
+            this.btnAdminAdd.Text = "Voeg toe";
+            this.btnAdminAdd.UseVisualStyleBackColor = true;
+            // 
+            // btnExportContract
+            // 
+            this.btnExportContract.Location = new System.Drawing.Point(436, 450);
+            this.btnExportContract.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExportContract.Name = "btnExportContract";
+            this.btnExportContract.Size = new System.Drawing.Size(132, 33);
+            this.btnExportContract.TabIndex = 0;
+            this.btnExportContract.Text = "Exporteer contract";
+            this.btnExportContract.UseVisualStyleBackColor = true;
+            this.btnExportContract.Click += new System.EventHandler(this.btnExportContract_Click);
             // 
             // dgvTotaalContracten
             // 
@@ -127,10 +301,34 @@
             this.colContractenBegin,
             this.colContractenEinde});
             this.dgvTotaalContracten.Location = new System.Drawing.Point(6, 21);
+            this.dgvTotaalContracten.MultiSelect = false;
             this.dgvTotaalContracten.Name = "dgvTotaalContracten";
             this.dgvTotaalContracten.RowHeadersVisible = false;
+            this.dgvTotaalContracten.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTotaalContracten.Size = new System.Drawing.Size(563, 414);
             this.dgvTotaalContracten.TabIndex = 1;
+            this.dgvTotaalContracten.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTotaalContracten_CellContentDoubleClick);
+            // 
+            // colContractenHuurder
+            // 
+            this.colContractenHuurder.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colContractenHuurder.HeaderText = "Huurder";
+            this.colContractenHuurder.Name = "colContractenHuurder";
+            this.colContractenHuurder.ReadOnly = true;
+            // 
+            // colContractenBegin
+            // 
+            this.colContractenBegin.HeaderText = "Van";
+            this.colContractenBegin.Name = "colContractenBegin";
+            this.colContractenBegin.ReadOnly = true;
+            this.colContractenBegin.Width = 160;
+            // 
+            // colContractenEinde
+            // 
+            this.colContractenEinde.HeaderText = "Tot";
+            this.colContractenEinde.Name = "colContractenEinde";
+            this.colContractenEinde.ReadOnly = true;
+            this.colContractenEinde.Width = 160;
             // 
             // dgvBotenTotaal
             // 
@@ -140,11 +338,14 @@
             this.dgvBotenTotaal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colBotenTotaalNaam,
             this.colBotenTotaalPrijs});
-            this.dgvBotenTotaal.Location = new System.Drawing.Point(6, 39);
+            this.dgvBotenTotaal.Location = new System.Drawing.Point(6, 21);
+            this.dgvBotenTotaal.MultiSelect = false;
             this.dgvBotenTotaal.Name = "dgvBotenTotaal";
             this.dgvBotenTotaal.RowHeadersVisible = false;
-            this.dgvBotenTotaal.Size = new System.Drawing.Size(240, 150);
+            this.dgvBotenTotaal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBotenTotaal.Size = new System.Drawing.Size(240, 168);
             this.dgvBotenTotaal.TabIndex = 2;
+            this.dgvBotenTotaal.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBotenTotaal_CellContentDoubleClick);
             // 
             // colBotenTotaalNaam
             // 
@@ -168,10 +369,26 @@
             this.colBotenSelectedNaam,
             this.colBotenSelectedPrijs});
             this.dgvBotenSelected.Location = new System.Drawing.Point(0, 264);
+            this.dgvBotenSelected.MultiSelect = false;
             this.dgvBotenSelected.Name = "dgvBotenSelected";
             this.dgvBotenSelected.RowHeadersVisible = false;
+            this.dgvBotenSelected.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBotenSelected.Size = new System.Drawing.Size(246, 150);
             this.dgvBotenSelected.TabIndex = 3;
+            this.dgvBotenSelected.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBotenSelected_CellContentDoubleClick);
+            // 
+            // colBotenSelectedNaam
+            // 
+            this.colBotenSelectedNaam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colBotenSelectedNaam.HeaderText = "Naam";
+            this.colBotenSelectedNaam.Name = "colBotenSelectedNaam";
+            this.colBotenSelectedNaam.ReadOnly = true;
+            // 
+            // colBotenSelectedPrijs
+            // 
+            this.colBotenSelectedPrijs.HeaderText = "Prijs";
+            this.colBotenSelectedPrijs.Name = "colBotenSelectedPrijs";
+            this.colBotenSelectedPrijs.ReadOnly = true;
             // 
             // groupBox1
             // 
@@ -194,6 +411,7 @@
             this.btnDelBoot.TabIndex = 6;
             this.btnDelBoot.Text = "Verwijder";
             this.btnDelBoot.UseVisualStyleBackColor = true;
+            this.btnDelBoot.Click += new System.EventHandler(this.btnDelBoot_Click);
             // 
             // btnAddBoot
             // 
@@ -203,6 +421,7 @@
             this.btnAddBoot.TabIndex = 6;
             this.btnAddBoot.Text = "Voeg toe";
             this.btnAddBoot.UseVisualStyleBackColor = true;
+            this.btnAddBoot.Click += new System.EventHandler(this.btnAddBoot_Click);
             // 
             // groupBox2
             // 
@@ -225,6 +444,7 @@
             this.btnDelArtikel.TabIndex = 5;
             this.btnDelArtikel.Text = "Verwijder";
             this.btnDelArtikel.UseVisualStyleBackColor = true;
+            this.btnDelArtikel.Click += new System.EventHandler(this.btnDelArtikel_Click);
             // 
             // btnAddArtikel
             // 
@@ -234,6 +454,7 @@
             this.btnAddArtikel.TabIndex = 4;
             this.btnAddArtikel.Text = "Voeg toe";
             this.btnAddArtikel.UseVisualStyleBackColor = true;
+            this.btnAddArtikel.Click += new System.EventHandler(this.btnAddArtikel_Click);
             // 
             // dgvArtikelenTotaal
             // 
@@ -243,11 +464,27 @@
             this.dgvArtikelenTotaal.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colArtikelTotaalNaam,
             this.colArtikelTotaalPrijs});
-            this.dgvArtikelenTotaal.Location = new System.Drawing.Point(6, 39);
+            this.dgvArtikelenTotaal.Location = new System.Drawing.Point(6, 21);
+            this.dgvArtikelenTotaal.MultiSelect = false;
             this.dgvArtikelenTotaal.Name = "dgvArtikelenTotaal";
             this.dgvArtikelenTotaal.RowHeadersVisible = false;
-            this.dgvArtikelenTotaal.Size = new System.Drawing.Size(240, 150);
+            this.dgvArtikelenTotaal.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvArtikelenTotaal.Size = new System.Drawing.Size(240, 168);
             this.dgvArtikelenTotaal.TabIndex = 2;
+            this.dgvArtikelenTotaal.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArtikelenTotaal_CellContentDoubleClick);
+            // 
+            // colArtikelTotaalNaam
+            // 
+            this.colArtikelTotaalNaam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colArtikelTotaalNaam.HeaderText = "Naam";
+            this.colArtikelTotaalNaam.Name = "colArtikelTotaalNaam";
+            this.colArtikelTotaalNaam.ReadOnly = true;
+            // 
+            // colArtikelTotaalPrijs
+            // 
+            this.colArtikelTotaalPrijs.HeaderText = "Prijs";
+            this.colArtikelTotaalPrijs.Name = "colArtikelTotaalPrijs";
+            this.colArtikelTotaalPrijs.ReadOnly = true;
             // 
             // dgvArtikelenSelected
             // 
@@ -258,10 +495,26 @@
             this.colArtikelSelectedNaam,
             this.colArtikelSelectedPrijs});
             this.dgvArtikelenSelected.Location = new System.Drawing.Point(0, 264);
+            this.dgvArtikelenSelected.MultiSelect = false;
             this.dgvArtikelenSelected.Name = "dgvArtikelenSelected";
             this.dgvArtikelenSelected.RowHeadersVisible = false;
+            this.dgvArtikelenSelected.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArtikelenSelected.Size = new System.Drawing.Size(246, 150);
             this.dgvArtikelenSelected.TabIndex = 3;
+            this.dgvArtikelenSelected.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArtikelenSelected_CellContentDoubleClick);
+            // 
+            // colArtikelSelectedNaam
+            // 
+            this.colArtikelSelectedNaam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colArtikelSelectedNaam.HeaderText = "Naam";
+            this.colArtikelSelectedNaam.Name = "colArtikelSelectedNaam";
+            this.colArtikelSelectedNaam.ReadOnly = true;
+            // 
+            // colArtikelSelectedPrijs
+            // 
+            this.colArtikelSelectedPrijs.HeaderText = "Prijs";
+            this.colArtikelSelectedPrijs.Name = "colArtikelSelectedPrijs";
+            this.colArtikelSelectedPrijs.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -291,6 +544,112 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Huurcontract";
+            // 
+            // btnContractBereken
+            // 
+            this.btnContractBereken.Location = new System.Drawing.Point(184, 610);
+            this.btnContractBereken.Name = "btnContractBereken";
+            this.btnContractBereken.Size = new System.Drawing.Size(162, 23);
+            this.btnContractBereken.TabIndex = 23;
+            this.btnContractBereken.Text = "Bereken aantal meren";
+            this.btnContractBereken.UseVisualStyleBackColor = true;
+            this.btnContractBereken.Click += new System.EventHandler(this.btnContractBereken_Click);
+            // 
+            // numContractBudget
+            // 
+            this.numContractBudget.Location = new System.Drawing.Point(102, 611);
+            this.numContractBudget.Maximum = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.numContractBudget.Minimum = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            this.numContractBudget.Name = "numContractBudget";
+            this.numContractBudget.Size = new System.Drawing.Size(53, 22);
+            this.numContractBudget.TabIndex = 22;
+            this.numContractBudget.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(9, 613);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 16);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Budget:";
+            // 
+            // numContractMeren
+            // 
+            this.numContractMeren.Location = new System.Drawing.Point(458, 552);
+            this.numContractMeren.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.numContractMeren.Name = "numContractMeren";
+            this.numContractMeren.Size = new System.Drawing.Size(53, 22);
+            this.numContractMeren.TabIndex = 20;
+            this.numContractMeren.ValueChanged += new System.EventHandler(this.numContractMeren_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(337, 554);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 16);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "Aantal meren:";
+            // 
+            // cbContractIJsselmeer
+            // 
+            this.cbContractIJsselmeer.AutoSize = true;
+            this.cbContractIJsselmeer.Location = new System.Drawing.Point(340, 513);
+            this.cbContractIJsselmeer.Name = "cbContractIJsselmeer";
+            this.cbContractIJsselmeer.Size = new System.Drawing.Size(93, 20);
+            this.cbContractIJsselmeer.TabIndex = 18;
+            this.cbContractIJsselmeer.Text = "IJsselmeer";
+            this.cbContractIJsselmeer.UseVisualStyleBackColor = true;
+            this.cbContractIJsselmeer.CheckedChanged += new System.EventHandler(this.cbContractIJsselmeer_CheckedChanged);
+            // 
+            // cbContractNoordzee
+            // 
+            this.cbContractNoordzee.AutoSize = true;
+            this.cbContractNoordzee.Location = new System.Drawing.Point(340, 485);
+            this.cbContractNoordzee.Name = "cbContractNoordzee";
+            this.cbContractNoordzee.Size = new System.Drawing.Size(87, 20);
+            this.cbContractNoordzee.TabIndex = 17;
+            this.cbContractNoordzee.Text = "Noordzee";
+            this.cbContractNoordzee.UseVisualStyleBackColor = true;
+            this.cbContractNoordzee.CheckedChanged += new System.EventHandler(this.cbContractNoordzee_CheckedChanged);
+            // 
+            // cbContractExport
+            // 
+            this.cbContractExport.AutoSize = true;
+            this.cbContractExport.Location = new System.Drawing.Point(211, 678);
+            this.cbContractExport.Name = "cbContractExport";
+            this.cbContractExport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbContractExport.Size = new System.Drawing.Size(135, 20);
+            this.cbContractExport.TabIndex = 16;
+            this.cbContractExport.Text = "Exporteer contract";
+            this.cbContractExport.UseVisualStyleBackColor = true;
+            // 
+            // btnContractNieuw
+            // 
+            this.btnContractNieuw.Location = new System.Drawing.Point(6, 671);
+            this.btnContractNieuw.Name = "btnContractNieuw";
+            this.btnContractNieuw.Size = new System.Drawing.Size(132, 33);
+            this.btnContractNieuw.TabIndex = 15;
+            this.btnContractNieuw.Text = "Nieuwe klant";
+            this.btnContractNieuw.UseVisualStyleBackColor = true;
+            this.btnContractNieuw.Click += new System.EventHandler(this.btnContractNieuw_Click);
             // 
             // label3
             // 
@@ -364,51 +723,13 @@
             this.btnSaveContract.TabIndex = 6;
             this.btnSaveContract.Text = "Opslaan";
             this.btnSaveContract.UseVisualStyleBackColor = true;
-            // 
-            // colBotenSelectedNaam
-            // 
-            this.colBotenSelectedNaam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colBotenSelectedNaam.HeaderText = "Naam";
-            this.colBotenSelectedNaam.Name = "colBotenSelectedNaam";
-            this.colBotenSelectedNaam.ReadOnly = true;
-            // 
-            // colBotenSelectedPrijs
-            // 
-            this.colBotenSelectedPrijs.HeaderText = "Prijs";
-            this.colBotenSelectedPrijs.Name = "colBotenSelectedPrijs";
-            this.colBotenSelectedPrijs.ReadOnly = true;
-            // 
-            // colArtikelTotaalNaam
-            // 
-            this.colArtikelTotaalNaam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colArtikelTotaalNaam.HeaderText = "Naam";
-            this.colArtikelTotaalNaam.Name = "colArtikelTotaalNaam";
-            this.colArtikelTotaalNaam.ReadOnly = true;
-            // 
-            // colArtikelTotaalPrijs
-            // 
-            this.colArtikelTotaalPrijs.HeaderText = "Prijs";
-            this.colArtikelTotaalPrijs.Name = "colArtikelTotaalPrijs";
-            this.colArtikelTotaalPrijs.ReadOnly = true;
-            // 
-            // colArtikelSelectedNaam
-            // 
-            this.colArtikelSelectedNaam.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colArtikelSelectedNaam.HeaderText = "Naam";
-            this.colArtikelSelectedNaam.Name = "colArtikelSelectedNaam";
-            this.colArtikelSelectedNaam.ReadOnly = true;
-            // 
-            // colArtikelSelectedPrijs
-            // 
-            this.colArtikelSelectedPrijs.HeaderText = "Prijs";
-            this.colArtikelSelectedPrijs.Name = "colArtikelSelectedPrijs";
-            this.colArtikelSelectedPrijs.ReadOnly = true;
+            this.btnSaveContract.Click += new System.EventHandler(this.btnSaveContract_Click);
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.btnToonDetailsHuurcontract);
             this.groupBox4.Controls.Add(this.dgvTotaalContracten);
-            this.groupBox4.Controls.Add(this.button1);
+            this.groupBox4.Controls.Add(this.btnExportContract);
             this.groupBox4.Location = new System.Drawing.Point(537, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(575, 489);
@@ -416,136 +737,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "ContractenOverzicht";
             // 
-            // btnContractNieuw
+            // btnToonDetailsHuurcontract
             // 
-            this.btnContractNieuw.Location = new System.Drawing.Point(6, 671);
-            this.btnContractNieuw.Name = "btnContractNieuw";
-            this.btnContractNieuw.Size = new System.Drawing.Size(132, 33);
-            this.btnContractNieuw.TabIndex = 15;
-            this.btnContractNieuw.Text = "Nieuwe klant";
-            this.btnContractNieuw.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 450);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 33);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "< Toon details";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // colContractenHuurder
-            // 
-            this.colContractenHuurder.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colContractenHuurder.HeaderText = "Huurder";
-            this.colContractenHuurder.Name = "colContractenHuurder";
-            this.colContractenHuurder.ReadOnly = true;
-            // 
-            // colContractenBegin
-            // 
-            this.colContractenBegin.HeaderText = "Van";
-            this.colContractenBegin.Name = "colContractenBegin";
-            this.colContractenBegin.ReadOnly = true;
-            this.colContractenBegin.Width = 160;
-            // 
-            // colContractenEinde
-            // 
-            this.colContractenEinde.HeaderText = "Tot";
-            this.colContractenEinde.Name = "colContractenEinde";
-            this.colContractenEinde.ReadOnly = true;
-            this.colContractenEinde.Width = 160;
-            // 
-            // cbContractExport
-            // 
-            this.cbContractExport.AutoSize = true;
-            this.cbContractExport.Location = new System.Drawing.Point(211, 678);
-            this.cbContractExport.Name = "cbContractExport";
-            this.cbContractExport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbContractExport.Size = new System.Drawing.Size(135, 20);
-            this.cbContractExport.TabIndex = 16;
-            this.cbContractExport.Text = "Exporteer contract";
-            this.cbContractExport.UseVisualStyleBackColor = true;
-            // 
-            // cbContractNoordzee
-            // 
-            this.cbContractNoordzee.AutoSize = true;
-            this.cbContractNoordzee.Location = new System.Drawing.Point(340, 485);
-            this.cbContractNoordzee.Name = "cbContractNoordzee";
-            this.cbContractNoordzee.Size = new System.Drawing.Size(87, 20);
-            this.cbContractNoordzee.TabIndex = 17;
-            this.cbContractNoordzee.Text = "Noordzee";
-            this.cbContractNoordzee.UseVisualStyleBackColor = true;
-            // 
-            // cbContractIJsselmeer
-            // 
-            this.cbContractIJsselmeer.AutoSize = true;
-            this.cbContractIJsselmeer.Location = new System.Drawing.Point(340, 513);
-            this.cbContractIJsselmeer.Name = "cbContractIJsselmeer";
-            this.cbContractIJsselmeer.Size = new System.Drawing.Size(93, 20);
-            this.cbContractIJsselmeer.TabIndex = 18;
-            this.cbContractIJsselmeer.Text = "IJsselmeer";
-            this.cbContractIJsselmeer.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 554);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 16);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Aantal meren:";
-            // 
-            // numContractMeren
-            // 
-            this.numContractMeren.Location = new System.Drawing.Point(458, 552);
-            this.numContractMeren.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.numContractMeren.Name = "numContractMeren";
-            this.numContractMeren.Size = new System.Drawing.Size(53, 22);
-            this.numContractMeren.TabIndex = 20;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 613);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 16);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Budget:";
-            // 
-            // numContractBudget
-            // 
-            this.numContractBudget.Location = new System.Drawing.Point(102, 611);
-            this.numContractBudget.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.numContractBudget.Minimum = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            this.numContractBudget.Name = "numContractBudget";
-            this.numContractBudget.Size = new System.Drawing.Size(53, 22);
-            this.numContractBudget.TabIndex = 22;
-            this.numContractBudget.Value = new decimal(new int[] {
-            15,
-            0,
-            0,
-            0});
-            // 
-            // btnContractBereken
-            // 
-            this.btnContractBereken.Location = new System.Drawing.Point(184, 610);
-            this.btnContractBereken.Name = "btnContractBereken";
-            this.btnContractBereken.Size = new System.Drawing.Size(162, 23);
-            this.btnContractBereken.TabIndex = 23;
-            this.btnContractBereken.Text = "Bereken aantal meren";
-            this.btnContractBereken.UseVisualStyleBackColor = true;
+            this.btnToonDetailsHuurcontract.Location = new System.Drawing.Point(6, 450);
+            this.btnToonDetailsHuurcontract.Name = "btnToonDetailsHuurcontract";
+            this.btnToonDetailsHuurcontract.Size = new System.Drawing.Size(132, 33);
+            this.btnToonDetailsHuurcontract.TabIndex = 2;
+            this.btnToonDetailsHuurcontract.Text = "< Toon details";
+            this.btnToonDetailsHuurcontract.UseVisualStyleBackColor = true;
+            this.btnToonDetailsHuurcontract.Click += new System.EventHandler(this.btnToonDetailsHuurcontract_Click);
             // 
             // btnLogin
             // 
@@ -556,179 +756,6 @@
             this.btnLogin.Text = "Beheerder Login";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // Artikelbeheer
-            // 
-            Artikelbeheer.Controls.Add(this.btnAdminOpslaan);
-            Artikelbeheer.Controls.Add(this.btnAdminDelete);
-            Artikelbeheer.Controls.Add(this.cbAdminMotorboot);
-            Artikelbeheer.Controls.Add(this.rbAdminBoot);
-            Artikelbeheer.Controls.Add(this.rbAdminArtikel);
-            Artikelbeheer.Controls.Add(this.nudAdminTank);
-            Artikelbeheer.Controls.Add(this.label10);
-            Artikelbeheer.Controls.Add(this.nudAdminAantal);
-            Artikelbeheer.Controls.Add(this.label9);
-            Artikelbeheer.Controls.Add(this.nudAdminPrijs);
-            Artikelbeheer.Controls.Add(this.label8);
-            Artikelbeheer.Controls.Add(this.tbAdminNaam);
-            Artikelbeheer.Controls.Add(this.label7);
-            Artikelbeheer.Controls.Add(this.lbAdminArtikelen);
-            Artikelbeheer.Controls.Add(this.btnAdminAdd);
-            Artikelbeheer.Location = new System.Drawing.Point(543, 511);
-            Artikelbeheer.Name = "Artikelbeheer";
-            Artikelbeheer.Size = new System.Drawing.Size(569, 215);
-            Artikelbeheer.TabIndex = 9;
-            Artikelbeheer.TabStop = false;
-            Artikelbeheer.Text = "Artikelbeheer";
-            // 
-            // btnAdminAdd
-            // 
-            this.btnAdminAdd.Location = new System.Drawing.Point(214, 175);
-            this.btnAdminAdd.Name = "btnAdminAdd";
-            this.btnAdminAdd.Size = new System.Drawing.Size(132, 33);
-            this.btnAdminAdd.TabIndex = 0;
-            this.btnAdminAdd.Text = "Voeg toe";
-            this.btnAdminAdd.UseVisualStyleBackColor = true;
-            // 
-            // lbAdminArtikelen
-            // 
-            this.lbAdminArtikelen.FormattingEnabled = true;
-            this.lbAdminArtikelen.ItemHeight = 16;
-            this.lbAdminArtikelen.Items.AddRange(new object[] {
-            "Artikelen"});
-            this.lbAdminArtikelen.Location = new System.Drawing.Point(352, 12);
-            this.lbAdminArtikelen.Name = "lbAdminArtikelen";
-            this.lbAdminArtikelen.Size = new System.Drawing.Size(210, 196);
-            this.lbAdminArtikelen.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 26);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(48, 16);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Naam:";
-            // 
-            // tbAdminNaam
-            // 
-            this.tbAdminNaam.Location = new System.Drawing.Point(128, 23);
-            this.tbAdminNaam.Name = "tbAdminNaam";
-            this.tbAdminNaam.Size = new System.Drawing.Size(100, 22);
-            this.tbAdminNaam.TabIndex = 3;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 52);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 16);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "Prijs:";
-            // 
-            // nudAdminPrijs
-            // 
-            this.nudAdminPrijs.Location = new System.Drawing.Point(128, 53);
-            this.nudAdminPrijs.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.nudAdminPrijs.Name = "nudAdminPrijs";
-            this.nudAdminPrijs.Size = new System.Drawing.Size(53, 22);
-            this.nudAdminPrijs.TabIndex = 24;
-            // 
-            // nudAdminAantal
-            // 
-            this.nudAdminAantal.Location = new System.Drawing.Point(128, 114);
-            this.nudAdminAantal.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.nudAdminAantal.Name = "nudAdminAantal";
-            this.nudAdminAantal.Size = new System.Drawing.Size(53, 22);
-            this.nudAdminAantal.TabIndex = 26;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 113);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 16);
-            this.label9.TabIndex = 25;
-            this.label9.Text = "Aantal:";
-            // 
-            // nudAdminTank
-            // 
-            this.nudAdminTank.Location = new System.Drawing.Point(128, 173);
-            this.nudAdminTank.Maximum = new decimal(new int[] {
-            12,
-            0,
-            0,
-            0});
-            this.nudAdminTank.Name = "nudAdminTank";
-            this.nudAdminTank.Size = new System.Drawing.Size(53, 22);
-            this.nudAdminTank.TabIndex = 28;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 172);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(85, 16);
-            this.label10.TabIndex = 27;
-            this.label10.Text = "Tank inhoud:";
-            // 
-            // rbAdminArtikel
-            // 
-            this.rbAdminArtikel.AutoSize = true;
-            this.rbAdminArtikel.Location = new System.Drawing.Point(9, 83);
-            this.rbAdminArtikel.Name = "rbAdminArtikel";
-            this.rbAdminArtikel.Size = new System.Drawing.Size(63, 20);
-            this.rbAdminArtikel.TabIndex = 29;
-            this.rbAdminArtikel.TabStop = true;
-            this.rbAdminArtikel.Text = "Artikel";
-            this.rbAdminArtikel.UseVisualStyleBackColor = true;
-            // 
-            // rbAdminBoot
-            // 
-            this.rbAdminBoot.AutoSize = true;
-            this.rbAdminBoot.Location = new System.Drawing.Point(128, 83);
-            this.rbAdminBoot.Name = "rbAdminBoot";
-            this.rbAdminBoot.Size = new System.Drawing.Size(54, 20);
-            this.rbAdminBoot.TabIndex = 30;
-            this.rbAdminBoot.TabStop = true;
-            this.rbAdminBoot.Text = "Boot";
-            this.rbAdminBoot.UseVisualStyleBackColor = true;
-            // 
-            // cbAdminMotorboot
-            // 
-            this.cbAdminMotorboot.AutoSize = true;
-            this.cbAdminMotorboot.Location = new System.Drawing.Point(9, 140);
-            this.cbAdminMotorboot.Name = "cbAdminMotorboot";
-            this.cbAdminMotorboot.Size = new System.Drawing.Size(88, 20);
-            this.cbAdminMotorboot.TabIndex = 31;
-            this.cbAdminMotorboot.Text = "Motorboot";
-            this.cbAdminMotorboot.UseVisualStyleBackColor = true;
-            // 
-            // btnAdminDelete
-            // 
-            this.btnAdminDelete.Location = new System.Drawing.Point(214, 127);
-            this.btnAdminDelete.Name = "btnAdminDelete";
-            this.btnAdminDelete.Size = new System.Drawing.Size(132, 33);
-            this.btnAdminDelete.TabIndex = 32;
-            this.btnAdminDelete.Text = "Verwijder";
-            this.btnAdminDelete.UseVisualStyleBackColor = true;
-            // 
-            // btnAdminOpslaan
-            // 
-            this.btnAdminOpslaan.Location = new System.Drawing.Point(214, 78);
-            this.btnAdminOpslaan.Name = "btnAdminOpslaan";
-            this.btnAdminOpslaan.Size = new System.Drawing.Size(132, 33);
-            this.btnAdminOpslaan.TabIndex = 33;
-            this.btnAdminOpslaan.Text = "Opslaan";
-            this.btnAdminOpslaan.UseVisualStyleBackColor = true;
             // 
             // Sloepke
             // 
@@ -743,6 +770,11 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Sloepke";
             this.Text = "\'t Sloepke";
+            Artikelbeheer.ResumeLayout(false);
+            Artikelbeheer.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdminTank)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdminAantal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudAdminPrijs)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTotaalContracten)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBotenTotaal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBotenSelected)).EndInit();
@@ -752,21 +784,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikelenSelected)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numContractMeren)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numContractBudget)).EndInit();
-            Artikelbeheer.ResumeLayout(false);
-            Artikelbeheer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAdminPrijs)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAdminAantal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAdminTank)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numContractMeren)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnExportContract;
         private System.Windows.Forms.DataGridView dgvTotaalContracten;
         private System.Windows.Forms.DataGridView dgvBotenTotaal;
         private System.Windows.Forms.DataGridView dgvBotenSelected;
@@ -809,7 +836,7 @@
         private System.Windows.Forms.CheckBox cbContractIJsselmeer;
         private System.Windows.Forms.CheckBox cbContractNoordzee;
         private System.Windows.Forms.CheckBox cbContractExport;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnToonDetailsHuurcontract;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnAdminDelete;
         private System.Windows.Forms.CheckBox cbAdminMotorboot;

@@ -13,5 +13,26 @@ namespace LPSloepke
         {
             Aantal = aantal;
         }
+
+        public string ToString(bool selected)
+        {
+            if (selected)
+            {
+                return "Naam: " + Naam + Environment.NewLine +
+                    "Aantal: " + Aantal + Environment.NewLine +
+                    "Prijs: " + (Aantal * Prijs).ToString("C");
+            }
+            else
+            {
+                return "Naam: " + Naam + Environment.NewLine +
+                    "Prijs per stuk: " + Prijs.ToString("C") + Environment.NewLine +
+                    "Aantal: " + Aantal;
+            }
+        }
+
+        public Accessoire Clone()
+        {
+            return (Accessoire)this.MemberwiseClone();
+        }
     }
 }
