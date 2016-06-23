@@ -131,6 +131,7 @@
             Artikelbeheer.TabIndex = 9;
             Artikelbeheer.TabStop = false;
             Artikelbeheer.Text = "Artikelbeheer";
+            Artikelbeheer.Visible = false;
             // 
             // btnAdminOpslaan
             // 

@@ -13,7 +13,7 @@ namespace LPSloepke
         /// <summary>
         /// Slaat een contract op in de database
         /// </summary>
-        public static void InsertContract(Huurcontract contract)
+        public static bool InsertContract(Huurcontract contract)
         {
             string query = @"InsertContract";
             int contractID = 0;
@@ -38,14 +38,9 @@ namespace LPSloepke
                     }
                     catch (Exception ex)
                     {
-                        contractID = 0;
+                        return false;
                     }
                 }
-            }
-
-            if (contractID == 0)
-            {
-                return;
             }
 
             foreach (Boot boot in contract.Artikelen.Where(x => x is Boot))
@@ -67,6 +62,7 @@ namespace LPSloepke
                         }
                         catch (Exception ex)
                         {
+                            return false;
                         }
                     }
                 }
@@ -93,11 +89,13 @@ namespace LPSloepke
                             }
                             catch (Exception ex)
                             {
+                                return false;
                             }
                         }
                     }
                 }
             }
+            return true;
         }
 
         /// <summary>

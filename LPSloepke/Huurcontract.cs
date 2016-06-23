@@ -50,7 +50,7 @@ namespace LPSloepke
                 }
             }
             bud = bud - kosten;
-            return (bud > 7.5 ? (int)Math.Round(bud/1.5) : (int)Math.Round(bud));
+            return (bud >= 7.5 ? (int)Math.Round(bud/1.5) : (int)Math.Round(bud));
         }
 
         public double BerekenPrijs()
